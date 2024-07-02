@@ -1,0 +1,42 @@
+Student Grade Calculator using Java Programming 
+View video Demo At My Linkedin 👉:https://www.linkedin.com/in/pradeep-k-445747293/
+
+import java.util.Scanner;
+
+public class studentgradecalculator {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter the no. of subjects:");
+            int subject = scanner.nextInt();
+
+
+            int totalmarks=0;          //total marks
+            for(int i=1; i<=subject;i++){
+                System.out.println("enter the marks for subjects"+(i)+":");
+                totalmarks += scanner.nextInt();
+            }
+            double averagepercentage= totalmarks/(double)subject;   //condition for averagepercentage
+
+            char grade;             //grade for the total percentage
+            if(averagepercentage>=90){
+                grade = 'A';
+            } else if (averagepercentage>=80) {
+                grade ='B';
+            } else if (averagepercentage>=70) {
+                grade ='C';
+            } else if (averagepercentage>=60) {
+                grade= 'D';
+            } else if (averagepercentage>=50) {
+                grade= 'E';
+            }
+            else {
+                grade ='F';
+                System.out.println("sorry you failed in exam,try again next time....");
+            }
+
+            System.out.println("TOTAL MARKS:"+totalmarks);
+            System.out.println("AVERAGE PERCENTAGE:"+averagepercentage+"%");
+            System.out.println("GRADE:"+grade);
+
+        }
+    }
